@@ -5,16 +5,15 @@ import logo from "../assets/logo.png"
 const Navbar = () => {
   return (
     <>
-    <div className="bg-gray-500">
-      <Link to={"/"} >HOME</Link>
-      <Link to={"/about"} >ABOUT</Link>
-      <Link to={"/services"} >SERVICES</Link>
-      <Link to={"/stories"} >CLIENT STORIES</Link>
-      <Link to={"/"}>
-        <img src='logo' alt=''/>
-      </Link>
-      <Link to={"/gallery"} >GALLERY</Link>
-      <Link to={"/contact"} >CONTACT</Link>
+    <div className="bg-transparent flex justify-evenly gap-25  text-xl items-center sticky top-0 z-99 text-amber-950 font-semibold">
+      <Link to={"/about"}>About</Link>
+        <Link to={"/services"}>Our Services</Link>
+        <Link to={"/stories"}>Client Stories</Link>
+        <Link to={"/"}>
+          <img src={logo} alt="" className="h-[5em]" />
+        </Link>
+        <Link to={"/gallery"}>Gallery</Link>
+        <Link to={"/contact"}>Contact Us</Link>
       <button>Login to Plan your Event</button>
     </div>
     </>
