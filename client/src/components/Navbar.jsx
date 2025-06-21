@@ -5,7 +5,7 @@ import logo from "../assets/logo.png"
 const Navbar = () => {
   return (
     <>
-    <div className="bg-transparent flex justify-evenly gap-25  text-xl items-center sticky top-0 z-99 text-amber-950 font-semibold">
+    <div className="bg-transparent flex justify-evenly gap-25 text-xl items-center sticky top-0 z-99 text-amber-950 font-semibold">
       <Link to={"/about"}>About</Link>
         <Link to={"/services"}>Our Services</Link>
         <Link to={"/stories"}>Client Stories</Link>
