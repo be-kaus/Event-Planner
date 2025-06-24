@@ -1,13 +1,16 @@
 import React from 'react'
-import loginpkka from "../assets/loginpkka.jpg"
+import loginbg from "../assets/loginbg.jpg";
+import { Link } from 'react-router-dom';
+
 const Login = () => {
   return (
     <>
+    <div className='mt-[-27%] bg-cover flex justify-center relative'>
+      <img src={loginbg} alt="" className='absolute'/>
 
-    <section  className='mt-[-10%] h-189' style={{backgroundImage:"url('https://www.dapetra.com/wp-content/uploads/slider/cache/96f749dc60d19c47f3603fcec0863719/4-Weddings-at-Stanjel-Castle.jpg')"}}>
-    
-      <div className="min-h-screen  flex items-center justify-center  p-4">
-      <div className="backdrop-blur-lg mt-50 bg-white/10 border border-white/30 shadow-xl rounded-2xl p-8 w-full max-w-md text-white">
+
+      <div className="min-h-screen mt-80 pt-35 flex items-center justify-center p-4">
+      <div className="backdrop-blur-lg bg-white/1 border border-white/30 shadow-xl rounded-2xl p-8 w-full max-w-md text-white">
         <h2 className="text-3xl font-semibold text-center mb-6">Login</h2>
         <form className="space-y-5">
           <div>
@@ -34,17 +37,17 @@ const Login = () => {
           </div>
           <button
             type="submit"
-            className="w-full py-2 rounded-lg bg-[#6f4e37] hover:bg-[#5b3e2c] transition-colors font-medium shadow-md"
+            className="w-full py-2 rounded-lg bg-[#FF8243] hover:bg-[#fb9062] transition-colors font-medium shadow-md"
           >
             Sign In
           </button>
+          <div>
+            Don't have an account ? <Link to={"/register"} className='text-[#fc9300] font-bold'>Register</Link>
+          </div>
         </form>
       </div>
-    </div> 
-    
-    </section>
-    
-    
+    </div>
+    </div>
     </>
   )
 }
