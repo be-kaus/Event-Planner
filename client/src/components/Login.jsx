@@ -5,11 +5,11 @@ import { Link } from 'react-router-dom';
 const Login = () => {
   return (
     <>
-    <div className='mt-[-27%] bg-cover flex justify-center relative'>
+    <div className='mt-[-16%] bg-cover flex justify-center relative'>
       <img src={loginbg} alt="" className='absolute'/>
 
 
-      <div className="min-h-screen mt-80 pt-35 flex items-center justify-center p-4">
+      <div className="min-h-screen mt-20 pt-35 flex items-center justify-center p-4">
       <div className="backdrop-blur-lg bg-white/1 border border-white/30 shadow-xl rounded-2xl p-8 w-full max-w-md text-white">
         <h2 className="text-3xl font-semibold text-center mb-6">Login</h2>
         <form className="space-y-5">
@@ -37,12 +37,12 @@ const Login = () => {
           </div>
           <button
             type="submit"
-            className="w-full py-2 rounded-lg bg-[#FF8243] hover:bg-[#fb9062] transition-colors font-medium shadow-md"
+            className="w-full py-2 rounded-lg bg-[#C70039] hover:bg-[#de313d] transition-colors font-medium shadow-md"
           >
             Sign In
           </button>
           <div>
-            Don't have an account ? <Link to={"/register"} className='text-[#fc9300] font-bold'>Register</Link>
+            Don't have an account ? <Link to={"/register"} className='text-[#f19fb6] font-bold'>Register</Link>
           </div>
         </form>
       </div>

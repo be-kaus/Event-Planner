@@ -21,7 +21,7 @@ const Register = () => {
             <input
               id="name"
               type="text"
-              placeholder="John Doe"
+              placeholder="name"
               className="w-full px-4 py-2 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50"
             />
           </div>
@@ -60,12 +60,12 @@ const Register = () => {
           </div>
           <button
             type="submit"
-            className="w-full py-2 rounded-lg bg-[#FF8243] hover:bg-[#fb9062] transition-colors font-medium shadow-md"
+            className="w-full py-2 rounded-lg bg-[#C70039] hover:bg-[#de313d] transition-colors font-medium shadow-md"
           >
             Register
           </button>
           <div className='flex justify-center'>
-            Don't have an account ? <Link to={"/login"} className='text-[#fc9300] font-bold'>Login</Link>
+            Don't have an account ? <Link to={"/login"} className='text-[#f19fb6] font-bold'>Login</Link>
           </div>
         </form>
       </div>

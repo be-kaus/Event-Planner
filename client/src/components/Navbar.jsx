@@ -1,16 +1,16 @@
 import React from 'react'
 import {Link} from "react-router-dom";
-import logo from "../assets/logo.png"
+import weblogo from "../assets/weblogo.png"
 
 const Navbar = () => {
   return (
     <>
-    <div className="bg-transparent flex justify-evenly text-xl items-center relative  top-0 z-99 text-[#f39b15] mt-10 font-bold">
+    <div className="bg-transparent flex justify-evenly text-2xl items-center gap-10 relative top-0 z-99 text-[#C70039] mt-10 font-bold">
         <Link to={"/about"}>About</Link>
         <Link to={"/services"}>Our Services</Link>
         <Link to={"/stories"}>Client Stories</Link>
         <Link to={"/"}>
-          <img src={logo} alt="" className="h-[5em] absolute top-0 left-185 " />
+          <img src={weblogo} alt="" className="h-[8em]" />
         </Link>
         <Link to={"/gallery"}>Gallery</Link>
         <Link to={"/contact"}>Contact Us</Link>
