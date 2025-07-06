@@ -1,20 +1,42 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import loginbg from "../assets/loginbg.jpg";
 import { Link } from 'react-router-dom';
+import api from "../config/api";
+import toast from "react-hot-toast";
 
 const Login = () => {
+  const navigate = useNavigate();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const formSubmitKro = (e) => {
+  const formSubmitKro =async (e) => {
     e.preventDefault();
     const logindata = {
-      Email: email,
+      email: email,
       Password: password,
+    };
+
+    console.log(logindata);
+     try {
+      const res = await api.post("/auth/login", {email,password});
+      toast.success(res.data.message);
+      setPassword("");
+      setEmail("");
+      navigate('/userDashboard');
+    } catch (error) {
+      toast.error(
+        `Error : ${error.response?.status || error.message} | ${
+          error.response?.data.message || ""
+        }`
+      );
+      console.log(error);
     }
     console.log(logindata);
-  }
+  };
+    
+  
 
   return (
     <>
@@ -49,7 +71,7 @@ const Login = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               className="w-full px-4 py-2 rounded-lg bg-white/20 border border-white/30 placeholder-white/70 text-white focus:outline-none focus:ring-2 focus:ring-white/50"
-              placeholder="••••••••"
+              placeholder="*******"
             />
           </div>
           <button

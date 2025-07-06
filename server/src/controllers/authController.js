@@ -1,5 +1,6 @@
 import User from "../models/userModel.js";
 import bcrypt from "bcrypt"
+import genToken from "../utils/auth.js";
 
 export const RegisterUser = async (req, res, next) => {
   try{
@@ -34,7 +35,40 @@ export const RegisterUser = async (req, res, next) => {
   }
 };
 
-export const LoginUser = (req, res) => {};
+export const LoginUser = async (req, res, next) => {
+  try {
+    const { email, password } = req.body;
+
+    if (!email || !password) {
+      const error = new Error("Email and password are required");
+      error.statusCode = 400;
+      return next(error);
+    }
+
+    const user = await User.findOne({ email });
+    if (!user) {
+      const error = new Error("Invalid email or password");
+      error.statusCode = 401;
+      return next(error);
+    }
+
+    const isVerified = await bcrypt.compare(password, user.password);
+
+    if (!isVerified) {
+      const error = new Error("Invalid email or password");
+      error.statusCode = 401;
+      return next(error);
+    }
+
+    genToken(user._id, res)
+    
+    res
+      .status(200)
+      .json({message: `Welcome Back ${user.name}`,data: user});
+  } catch (error) {
+    next(error);
+  }
+};
 
 export const LogoutUser = (req, res) => {};
 
