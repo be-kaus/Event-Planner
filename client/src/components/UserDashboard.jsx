@@ -126,6 +126,7 @@ const UserDashboard = () => {
           </div>
           <h2 className="mt-4 text-xl font-semibold text-[#5e2c04]">{userdata.name}</h2>
           <p className="text-sm text-[#946231]">{userdata.email}</p>
+          <p className="text-sm text-[#946231]">{userdata.phone}</p>
         </div>
         <nav className="space-y-4 text-[#6b3b11] text-sm">
           {sections.map((s) => (
