@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import loginpage from "../assets/loginpage.png";
+import loginback from "../assets/loginback.png";
 import { Link } from 'react-router-dom';
 import api from "../config/api";
 import toast from "react-hot-toast";
@@ -40,12 +40,12 @@ const Login = () => {
 
   return (
     <>
-    <div className='mt-[-16%] bg-cover flex justify-center relative'>
-      <img src={loginpage} alt="" className='absolute'/>
+    <div className='bg-cover flex justify-center relative'>
+      <img src={loginback} alt="" className='absolute'/>
 
 
       <div className="min-h-screen mt-20 pt-35 flex items-center justify-center p-4">
-      <div className="backdrop-blur-lg bg-black/3 border border-white/30 shadow-xl rounded-2xl p-8 w-full max-w-md text-white">
+      <div className="backdrop-blur-lg bg-black/1 border border-white/30 shadow-xl rounded-2xl p-8 w-full max-w-md text-white">
         <h2 className="text-3xl font-semibold text-center mb-6">Login</h2>
         <form className="space-y-5" onSubmit={formSubmitKro}>
           <div>
