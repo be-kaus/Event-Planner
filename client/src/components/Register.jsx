@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import registerbg from "../assets/registerbg.jpg";
+import registerpage from "../assets/registerpage.png";
 import { Link } from "react-router-dom";
 import api from "../config/api";
 import {toast} from "react-hot-toast";
@@ -42,7 +42,7 @@ const Register = () => {
   return (
     <>
       <div className="mt-[-19%] bg-cover  flex justify-center relative">
-        <img src={registerbg} alt="" className="absolute" />
+        <img src={registerpage} alt="" className="absolute" />
 
         <div className="min-h-screen flex items-center justify-center p-4">
           <div className=" mt-90 ml-10 backdrop-blur-lg bg-white/10 border border-white/30 shadow-xl rounded-2xl p-8 w-md text-white">
@@ -127,7 +127,7 @@ const Register = () => {
               </button>
               <div className="flex justify-center">
                 Don't have an account ?{" "}
-                <Link to={"/login"} className="text-[#f19fb6] font-bold">
+                <Link to={"/login"} className="text-[#C70039] font-bold pl-3">
                   Login
                 </Link>
               </div>
