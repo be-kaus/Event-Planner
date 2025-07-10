@@ -3,7 +3,6 @@ import { toast } from "react-hot-toast";
 import api from "../config/api";
 import { useNavigate } from "react-router-dom";
 
-
 const UserDashboard = () => {
   const navigate = useNavigate();
   const [userdata, setUserData] = useState({
@@ -15,7 +14,7 @@ const UserDashboard = () => {
     ip: "192.168.1.23",
     device: "Chrome on Windows",
     notifications: [],
-    events: []
+    events: [],
   });
 
   const [activeSection, setActiveSection] = useState("Dashboard");
@@ -44,7 +43,7 @@ const UserDashboard = () => {
     "Notifications",
     "Event Timeline",
     "Login Activity",
-    "Account Settings"
+    "Account Settings",
   ];
 
   const SidebarItem = ({ label }) => (
@@ -64,8 +63,12 @@ const UserDashboard = () => {
     <div className="bg-white rounded-xl shadow-md p-6 border border-[#e0c9a6]">
       <div className="flex justify-between items-center">
         <div>
-          <h3 className="text-lg font-semibold text-[#5e2c04] mb-1">Wallet Balance</h3>
-          <p className="text-2xl font-bold text-[#8b1f1f]">₹{userdata.wallet}</p>
+          <h3 className="text-lg font-semibold text-[#5e2c04] mb-1">
+            Wallet Balance
+          </h3>
+          <p className="text-2xl font-bold text-[#8b1f1f]">
+            ₹{userdata.wallet}
+          </p>
         </div>
         <button className="bg-[#8b1f1f] text-white px-4 py-2 rounded-md hover:bg-[#a83232] text-sm">
           Add Funds
@@ -76,7 +79,9 @@ const UserDashboard = () => {
 
   const NotificationsSection = () => (
     <div className="bg-white rounded-xl shadow-md p-6 border border-[#e0c9a6]">
-      <h3 className="text-lg font-semibold text-[#5e2c04] mb-4">Notifications</h3>
+      <h3 className="text-lg font-semibold text-[#5e2c04] mb-4">
+        Notifications
+      </h3>
       <ul className="space-y-2 text-sm text-[#6b3b11] list-disc list-inside">
         <li>New message from planner</li>
         <li>Payment reminder for catering</li>
@@ -98,16 +103,26 @@ const UserDashboard = () => {
 
   const LoginSection = () => (
     <div className="bg-white rounded-xl shadow-md p-6 border border-[#e0c9a6]">
-      <h3 className="text-lg font-semibold text-[#5e2c04] mb-4">Login Activity</h3>
-      <p className="text-sm text-[#6b3b11]"><b>Last Login:</b> {userdata.lastLogin}</p>
-      <p className="text-sm text-[#6b3b11]"><b>IP:</b> {userdata.ip}</p>
-      <p className="text-sm text-[#6b3b11]"><b>Device:</b> {userdata.device}</p>
+      <h3 className="text-lg font-semibold text-[#5e2c04] mb-4">
+        Login Activity
+      </h3>
+      <p className="text-sm text-[#6b3b11]">
+        <b>Last Login:</b> {userdata.lastLogin}
+      </p>
+      <p className="text-sm text-[#6b3b11]">
+        <b>IP:</b> {userdata.ip}
+      </p>
+      <p className="text-sm text-[#6b3b11]">
+        <b>Device:</b> {userdata.device}
+      </p>
     </div>
   );
 
   const SettingsSection = () => (
     <div className="bg-white rounded-xl shadow-md p-6 border border-[#e0c9a6]">
-      <h3 className="text-lg font-semibold text-[#5e2c04] mb-4">Account Settings</h3>
+      <h3 className="text-lg font-semibold text-[#5e2c04] mb-4">
+        Account Settings
+      </h3>
       <div className="flex flex-col sm:flex-row gap-4">
         <button className="bg-[#8b1f1f] text-white text-sm px-4 py-2 rounded-md hover:bg-[#a83232]">
           Logout
@@ -128,11 +143,18 @@ const UserDashboard = () => {
             {/* {userdata.name.charAt(0)} */}
             <img src={userdata.photo} alt="" />
           </div>
-          <h2 className="mt-4 text-xl font-semibold text-[#5e2c04]">{userdata.name}</h2>
+          <h2 className="mt-4 text-xl font-semibold text-[#5e2c04]">
+            {userdata.name}
+          </h2>
           <p className="text-sm text-[#946231]">{userdata.email}</p>
           <p className="text-sm text-[#946231]">{userdata.phone}</p>
           <div>
-            <button className=" absolute border-2 rounded-2xl pl-5 hover:bg-yellow-100  bg-yellow-50 pr-5 ml-19">Edit</button>
+            <button
+              className=" absolute  rounded-2xl pl-5 text-[#8b1f1f] hover:text-[#fbe8d3] hover:bg-[#8b1f1f]  bg-[#fbe8d3] pr-5 ml-19"
+              
+            >
+              Edit
+            </button>
           </div>
         </div>
         <nav className="space-y-4 text-[#6b3b11] text-sm">
