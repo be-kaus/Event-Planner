@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
 import api from "../config/api";
-import { useNavigate } from "react-router-dom";
 
-
-const UserDashboard = () => {
-  const navigate = useNavigate();
+const UserDashboardEdit = () => {
   const [userdata, setUserData] = useState({
     name: "John Doe",
     email: "john.doe@example.com",
@@ -164,4 +161,4 @@ const UserDashboard = () => {
   );
 };
 
-export default UserDashboard;
+export default UserDashboardEdit;
