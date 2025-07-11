@@ -27,44 +27,53 @@ const Profile = () => {
   }, []);
 
   return (
-    <>
-      <div className="flex flex-col items-center justify-center bg-gray-100">
-        <h1 className="text-2xl font-bold">User Dashboard</h1>
-        <p className="text-gray-600">Welcome to your dashboard!</p>
+    <section className="bg-gradient-to-b from-[#fff7ef] to-[#fdeada] min-h-screen py-16 px-4 font-serif">
+      <div className="max-w-4xl mx-auto text-center mb-12">
+        <h1 className="text-5xl font-extrabold text-[#7a1d1d] mb-3 tracking-wide">
+          Welcome, {userdata.fullName?.split(" ")[0]}
+        </h1>
+        <p className="text-[#6b3b16] text-lg italic">
+          A graceful glance at your profile.
+        </p>
       </div>
 
-      <div className="bg-white relative mx-auto my-5 w-[50%] border p-6 rounded-lg shadow-md flex justify-center gap-20 items-center">
-        <div className="">
-          <div className="w-50 h-50 rounded-full">
-            <img
-              src={userdata.photo}
-              alt=""
-              className="w-50 h-50 rounded-full object-cover"
-            />
+      <div className="bg-white border border-[#d6b78f] rounded-3xl shadow-2xl p-10 max-w-4xl mx-auto flex flex-col-reverse md:flex-row items-center gap-10 transition-all duration-500 ease-in-out hover:shadow-[0_10px_50px_rgba(0,0,0,0.1)]">
+        {/* Info Section */}
+        <div className="flex-1 text-[#5e2c04] space-y-4 text-lg w-full">
+          <div>
+            <span className="font-semibold text-[#a3542d]">Name:</span>{" "}
+            {userdata.name}
           </div>
-          
+          <div>
+            <span className="font-semibold text-[#a3542d]">Email:</span>{" "}
+            {userdata.email}
+          </div>
+          <div>
+            <span className="font-semibold text-[#a3542d]">Phone:</span>{" "}
+            {userdata.phone}
+          </div>
         </div>
-        <div className="grid justify-around gap-5">
-          <h3>
-            <b>Name :</b> {userdata.fullName}
-          </h3>
-          <h3>
-            <b>Email :</b> {userdata.email}
-          </h3>
-          <h3>
-            <b>Phone :</b> {userdata.phone}
-          </h3>
+
+        {/* Image Section */}
+        <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-[#c49b63] shadow-md">
+          <img
+            src={userdata.photo} 
+            alt=""
+            className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+          />
         </div>
+
+        {/* Edit Button */}
         <button
-          className="absolute top-1 right-1 border p-2 rounded-lg flex gap-2 justify-center items-center bg-rose-300 hover:bg-rose-400 text-lg"
           onClick={() => navigate("/userDashboardEdit")}
+          className="absolute top-50 right-10 bg-[#f5cbaa] hover:bg-[#ab8668] text-[#5e2c04] hover:text-[#f5cbaa] font-semibold px-5 py-2 rounded-full flex items-center gap-2 shadow-lg transition-all duration-200"
         >
           {" "}
           <CiEdit />
           Edit
         </button>
       </div>
-    </>
+    </section>
   );
 };
 
