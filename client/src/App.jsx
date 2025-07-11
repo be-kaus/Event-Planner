@@ -10,6 +10,7 @@ import Services from './components/Services';
 import About from './components/About';
 import {Toaster} from "react-hot-toast";
 import UserDashboard from './components/UserDashboard';
+import CustomerDashboard from './components/CustomerDashboard';
 
 const App = () => {
   return (
@@ -29,8 +30,7 @@ const App = () => {
      <Route path="/services" element={<Services />} />
      <Route path="/about" element={<About />} />
      <Route path="/userDashboard" element={<UserDashboard />} />
-
-     
+     <Route path="/dashboard" element={<CustomerDashboard />} />
     </Routes>
     </BrowserRouter>
     </>
