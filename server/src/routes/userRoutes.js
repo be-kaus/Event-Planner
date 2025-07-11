@@ -9,6 +9,6 @@ const router = express.Router();
 
 router.get("/profile", Protect, GetProfile);
 
-router.put("/update", Protect,upload.single("picture"), UpdateProfile)
+router.put("/update", Protect,upload.single("picture"), )
 
 export default router;
