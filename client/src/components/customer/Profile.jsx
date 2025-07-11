@@ -186,4 +186,4 @@ const UserDashboard = () => {
   );
 };
 
-export default UserDashboard;
+export default Profile;

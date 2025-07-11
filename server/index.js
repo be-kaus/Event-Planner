@@ -35,10 +35,6 @@ app.use((error,req,res,next) => {
 
 const port =process.env.PORT ||5000;
 app.listen(port,async ()=>{
+    await connectDB();
     console.log("server started at",port);
-
-    // try{
-    //     await connectDB();
-    //     await 
-    // }
 });
