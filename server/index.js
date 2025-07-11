@@ -8,6 +8,7 @@ import connectDB from './src/config/db.js';
 import AuthRouter from "./src/routes/authRoutes.js";
 import UserRouter from "./src/routes/userRoutes.js";
 import cookieParser from 'cookie-parser';
+import {v2 as cloudinary} from "cloudinary";
 
 
 const app = express();
@@ -33,7 +34,11 @@ app.use((error,req,res,next) => {
 })
 
 const port =process.env.PORT ||5000;
-app.listen(port,()=>{
+app.listen(port,async ()=>{
     console.log("server started at",port);
-    connectDB();
+
+    // try{
+    //     await connectDB();
+    //     await 
+    // }
 });
