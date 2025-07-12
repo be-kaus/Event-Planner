@@ -59,7 +59,7 @@ const Profile = () => {
           <img
             src={userdata.photo} 
             alt=""
-            className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+            className=""
           />
         </div>
 
