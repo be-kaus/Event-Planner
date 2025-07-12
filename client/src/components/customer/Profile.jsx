@@ -69,7 +69,7 @@ const Profile = () => {
           </div>
 
           {/*  Additional Info Section */}
-          <div className="bg-white border border-[#e8d4bb] rounded-2xl shadow-md p-8 max-w-4xl mx-auto mt-8 text-[#5e2c04]">
+          <div className="bg-white border border-[#e8d4bb] rounded-2xl shadow-2xl p-8 max-w-4xl mx-auto mt-8 text-[#5e2c04]">
             <h2 className="text-2xl font-bold mb-4 text-[#7a1d1d]">
               Additional Information
             </h2>
@@ -111,9 +111,9 @@ const Profile = () => {
 
           <button
             onClick={() => setIsEditModalOpen(true)}
-            className="absolute top-5 right-5 bg-[#f5cbaa] hover:bg-[#896b51] text-[#492609] hover:text-[#f5cbaa] font-semibold px-5 py-2 rounded-full flex items-center gap-2  "
+            className="absolute top-5 right-5 bg-[#f5cbaa] hover:bg-[#7a1d1d] text-[#492609] hover:text-[#f0b96d] font-semibold px-5 py-2 rounded-full flex items-center gap-2  "
           >
-            <CiEdit />
+            <CiEdit className="text-xl"/>
             Edit
           </button>
         </div>
