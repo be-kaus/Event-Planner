@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { IoIosCloseCircle } from "react-icons/io";
+import { FaCamera } from "react-icons/fa";
+import api from "../../config/api";
+import {toast} from 'react-hot-toast'
 
 const ProfileEditModal = ({ isOpen, onClose, oldData }) => {
   const [userdata, setUserData] = useState(oldData);

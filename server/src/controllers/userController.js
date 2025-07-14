@@ -19,6 +19,7 @@ export const GetProfile = async (req, res, next) => {
 export const UpdateProfile = async (req, res, next) => {
   try {
     const currentUser = req.user;
+    const { name, phone, gender, occupation, address, city, state, district, } = req.body;
     if (!currentUser) {
       const error = new Error("User Not Found !! Login Again");
       error.statusCode = 401;
