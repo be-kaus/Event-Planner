@@ -4,11 +4,13 @@ import api from "../../config/api";
 import { CiEdit } from "react-icons/ci";
 import { useNavigate } from "react-router-dom";
 import ProfileEditModal from "./profileEditModal";
+import AccountDeactivateModal from "./AccountDeactivateModal";
 
 const Profile = () => {
   const navigate = useNavigate();
   const [userdata, setUserData] = useState("");
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+  const [isDeactivateModalOpen, setIsDeactivateModalOpen] = useState(false);
 
   const fetchUserData = async () => {
     try {
@@ -125,6 +127,30 @@ const Profile = () => {
           setIsEditModalOpen(false);
         }}
         oldData={userdata}
+      />
+
+      <button
+        className="border border-[#a3542d] hover:scale-105 mt-5 mx-5 float-end text-[#a3542d] p-2 rounded-lg font-bold flex gap-2 justify-center items-center hover:bg-[#a3542d] hover:text-white cursor-pointer text-lg transition-all duration-300"
+        onClick={() => {
+          setIsDeactivateModalOpen(true);
+        }}
+      >
+        Deactivate My acoount
+      </button>
+
+      <ProfileEditModal
+        isOpen={isEditModalOpen}
+        onClose={() => {
+          setIsEditModalOpen(false);
+        }}
+        oldData={userdata}
+      />
+
+      <AccountDeactivateModal
+        isOpen={isDeactivateModalOpen}
+        onClose={() => {
+          setIsDeactivateModalOpen(false);
+        }}
       />
     </>
   );

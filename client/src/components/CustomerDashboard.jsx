@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import Sidebar from "../components/Customer/Sidebar";
 import Overview from "../components/Customer/Overview";
-import Profile from "../components/Customer/Profile";
 import Bookings from "../components/Customer/Bookings";
 import Support from "../components/Customer/Support";
 import Feedback from "../components/Customer/Feedback";
+import Profile from "./customer/Profile";
 
 const CustomerDashboard = () => {
   const [active, setActive] = useState("overview");
