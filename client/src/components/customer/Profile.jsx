@@ -30,7 +30,7 @@ const Profile = () => {
 
   return (
     <>
-      <section className="bg-gradient-to-b from-[#fff7ef] to-[#fdeada] min-h-screen py-16 px-4 font-serif relative">
+      <section className="bg-gradient-to-b from-[#fff7ef] to-[#fdeada] min-h-screen py-16 px-4 font-serif relative ">
         <div className="max-w-4xl mx-auto text-center mb-12">
           <h1 className="text-5xl font-extrabold text-[#7a1d1d] mb-3 tracking-wide">
             Welcome, {userdata.fullName?.split(" ")[0]}
