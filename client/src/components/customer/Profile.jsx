@@ -130,7 +130,7 @@ const Profile = () => {
       />
 
       <button
-        className="border border-[#8b1f1f] hover:scale-105 mt-5 mx-5 float-end text-[#8b1f1f] hover:text-white bg-transparent hover:bg-[#341c1c] p-2 rounded-lg font-bold flex gap-2 justify-center items-center cursor-pointer text-lg transition-all duration-300"
+        className="border border-[#8b1f1f] hover:scale-105 mt-5 mx-5 float-end text-[#8b1f1f] hover:text-white bg-transparent hover:bg-[#b84c4c] p-2 rounded-lg font-bold flex gap-2 justify-center items-center cursor-pointer text-lg transition-all duration-300"
         onClick={() => {
           setIsDeactivateModalOpen(true);
         }}
