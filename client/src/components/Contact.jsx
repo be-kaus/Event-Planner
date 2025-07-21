@@ -19,6 +19,7 @@ const Contact = () => {
             </label>
             <input
               type="text"
+              id="name"
               className="w-full px-4 py-2 border border-[#c49b63] rounded-md focus:outline-none focus:ring-2 focus:ring-[#d4a373]"
               placeholder="Enter your name"
             />
@@ -29,6 +30,7 @@ const Contact = () => {
             </label>
             <input
               type="email"
+              id="email"
               className="w-full px-4 py-2 border border-[#c49b63] rounded-md focus:outline-none focus:ring-2 focus:ring-[#d4a373]"
               placeholder="Enter your email"
             />
