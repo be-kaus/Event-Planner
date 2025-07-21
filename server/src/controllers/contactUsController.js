@@ -13,7 +13,7 @@ export const SubmitContactForm = async (req, res, next) => {
 
    
 
-    const newContact = await Contact.create({ name, email, message:contact });
+    const newContact = await Contact.create({ name, email, contact });
 
     console.log("New contact form submission:", newContact);
     
