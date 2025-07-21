@@ -9,6 +9,6 @@ const ContactSchema = mongoose.Schema(
   { timestamps: true }
 );
 
-const contact = mongoose.model("contact", ContactSchema);
+const Contact = mongoose.model("Contact", ContactSchema);
 
-export default contact;
+export default Contact;

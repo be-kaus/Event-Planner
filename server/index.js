@@ -8,6 +8,7 @@ import connectDB from './src/config/db.js';
 import AuthRouter from "./src/routes/authRoutes.js";
 import UserRouter from "./src/routes/userRoutes.js";
 import cookieParser from 'cookie-parser';
+import ContactUsRouter from "./src/routes/contactRoute.js";
 //import {v2 as cloudinary} from "cloudinary";
 
 
@@ -18,6 +19,7 @@ app.use(cors({origin: "http://localhost:5173", credentials: true }))
 app.use(express.json());
 app.use(cookieParser());
 app.use(morgan("dev"));
+app.use("/contact",ContactUsRouter);
 
 app.use("/auth", AuthRouter);
 app.use("/user",UserRouter)

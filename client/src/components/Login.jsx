@@ -8,6 +8,7 @@ import { useAuth } from "../context/AuthContext";
 
 const Login = () => {
   const navigate = useNavigate();
+  
   const {user,setUser,isLogin,setIsLogin,isAdmin,setIsAdmin} = useAuth();
 
   const [email, setEmail] = useState("");
