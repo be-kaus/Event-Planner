@@ -11,8 +11,6 @@ export const SubmitContactForm = async (req, res, next) => {
       return next(error);
     }
 
-   
-
     const newContact = await Contact.create({ name, email, contact });
 
     console.log("New contact form submission:", newContact);
