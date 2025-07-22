@@ -7,8 +7,22 @@ import {
   FaCommentDots,
   FaSignOutAlt,
 } from "react-icons/fa";
+import api from "../../config/api";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext";
 
 const Sidebar = ({ active, setActive }) => {
+  const { setUser, setIsLogin, setIsAdmin } = useAuth();
+  const navigate = useNavigate();
+  const handleLogout = async () => {
+    const res = await api.get("/auth/logout");
+    setUser("");
+    sessionStorage.removeItem("EventUser");
+    setIsLogin(false);
+    setIsAdmin(false);
+    navigate("/");
+  };
+
   return (
     <div className="w-64 min-h-screen bg-[#fff3e0] border-r border-[#c49b63] shadow-xl py-8 px-6 flex flex-col justify-between">
       {/* Header */}
@@ -56,7 +70,10 @@ const Sidebar = ({ active, setActive }) => {
 
       {/* Logout Button */}
       <div className="">
-        <button className="text-[#8b1f1f] hover:text-white font-semibold w-full border border-[#8b1f1f] py-2 rounded-lg flex gap-2 items-center justify-center bg-transparent hover:bg-[#8b1f1f] transition duration-300">
+        <button
+          className="text-[#8b1f1f] hover:text-white font-semibold w-full border border-[#8b1f1f] py-2 rounded-lg flex gap-2 items-center justify-center bg-transparent hover:bg-[#8b1f1f] transition duration-300"
+          onClick={handleLogout}
+        >
           Logout
           <FaSignOutAlt />
         </button>
