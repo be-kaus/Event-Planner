@@ -32,7 +32,6 @@ const Sidebar = ({ active, setActive }) => {
             Customer's Dashboard
           </span>
         </div>
-
         {/* Menu Items */}
         <ul className="space-y-3">
           <SidebarItem
