@@ -66,7 +66,6 @@ const Sidebar = ({ active, setActive }) => {
           />
         </ul>
       </div>
-
       {/* Logout Button */}
       <div className="">
         <button
