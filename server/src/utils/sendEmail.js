@@ -16,7 +16,7 @@ const sendEmail = async (to, subject, mailBody) => {
             subject,
             html: mailBody,
         };
-        
+
         const result = await transpoter.sendMail(mailOptions);
         console.log(`Email sent successfully to`, result.messageId);
         return true;
@@ -25,3 +25,5 @@ const sendEmail = async (to, subject, mailBody) => {
         return false;
     }
 };
+
+export default sendEmail;
